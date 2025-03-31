@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "libusb.h": "c",
+        "stdio.h": "c"
+    }
+}
