@@ -72,5 +72,5 @@ int tr::send_frame(Device device, uint16_t* frame){
 }
 
 void tr::test(){
-    printf("hello world");
+    printf("hello world\n");
 }

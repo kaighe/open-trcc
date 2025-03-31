@@ -34,13 +34,16 @@ namespace tr{
     typedef libusb_device_handle* Device;
     typedef libusb_context* Context;
 
-    TR_API int init(Context* ctx);
-    TR_API int connect_to_device(Context ctx, Device* device);
+    extern "C"
+    {
+        TR_API int init(Context* ctx);
+        TR_API int connect_to_device(Context ctx, Device* device);
 
-    TR_API void close_device(Device device);
-    TR_API void close_context(Context ctx);
+        TR_API void close_device(Device device);
+        TR_API void close_context(Context ctx);
 
-    TR_API uint16_t rgb16(uint8_t r, uint8_t g, uint8_t b);
-    TR_API int send_frame(Device device, uint16_t* frame);
-    TR_API void test();
+        TR_API uint16_t rgb16(uint8_t r, uint8_t g, uint8_t b);
+        TR_API int send_frame(Device device, uint16_t* frame);
+        TR_API void test();
+    }
 }
