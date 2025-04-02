@@ -24,11 +24,14 @@ int main() {
     }
 
     printf("Sending frames...\n");
+    int i = 0;
     while(true){
+        printf("frame %d\n", i);
         if(!tr::send_frame(device, frame)){
             printf("Failed to send frame.\n");
             return 1;
         }
+        i++;
     }
 
     tr::close_device(device);
